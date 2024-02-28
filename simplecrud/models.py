@@ -8,6 +8,7 @@ user_film_association = Table(
     Base.metadata,
     Column("user_id", Integer, ForeignKey("users.id")),
     Column("film_id", Integer, ForeignKey("films.id")),
+    Column("role", String),  # Role can be "writer", "producer", or "director"
 )
 
 user_company_association = Table(
@@ -15,8 +16,8 @@ user_company_association = Table(
     Base.metadata,
     Column("user_id", Integer, ForeignKey("users.id")),
     Column("company_id", Integer, ForeignKey("companies.id")),
+    Column("role", String),  # Role can be "owner" or "member"
 )
-
 
 class User(Base):
     __tablename__ = "users"
