@@ -18,3 +18,15 @@ class UserRead(UserBase):
 
 class UserUpdate(UserBase):
     pass
+
+
+class UserFilmAssociationResponse(BaseModel):
+    user_id: int
+    film_id: int
+    role: str
+
+
+class UserCompanyAssociationResponse(BaseModel):
+    user_id: int
+    company_id: int
+    role: str

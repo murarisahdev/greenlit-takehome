@@ -1,3 +1,4 @@
+from typing import List
 from pydantic import BaseModel
 
 
@@ -6,7 +7,7 @@ class FilmBase(BaseModel):
     description: str
     budget: int
     release_year: int
-    genres: list[str]
+    genres: List[str]
 
 
 class FilmCreate(FilmBase):

@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 
 from simplecrud.database import get_db
 from simplecrud.crud import user_crud
-from simplecrud.schemas.user import UserCreate, UserRead, UserUpdate
+from simplecrud.schemas.user import UserCreate, UserRead, UserUpdate 
 
 router = APIRouter(prefix="/users", tags=["users"])
 

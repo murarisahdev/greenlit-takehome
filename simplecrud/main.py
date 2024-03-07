@@ -3,7 +3,7 @@ from typing import Union
 
 from . import models
 from .database import engine
-from .routers import user_router, film_router, company_router
+from .routers import user_router, film_router, company_router, user_roles_router
 
 app = FastAPI()
 
@@ -21,3 +21,4 @@ def read_item(item_id: int, q: Union[str, None] = None):
 app.include_router(user_router.router)
 app.include_router(film_router.router)
 app.include_router(company_router.router)
+app.include_router(user_roles_router.router)
